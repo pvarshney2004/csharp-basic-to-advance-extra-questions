@@ -38,6 +38,23 @@ Vehicle (Abstract Base Class)
     └── Cost: Base Rate $1 + $0.15 per km
 ```
 
+---
+
+##  Project Structure
+
+```
+Eco-Ride/
+├── Vehicle.cs              # Abstract base class for all vehicles
+├── ElectricCar.cs          # Electric car implementation
+├── ElectricScooter.cs      # Electric scooter implementation
+├── EcoRideMain.cs          # Application entry point and demo
+├── Eco-Ride.csproj         # Project configuration file
+├── README.md              # This file
+└── .gitignore             # Git ignore configuration
+```
+
+---
+
 ### Core Classes
 
 #### **Vehicle.cs** (Abstract Base Class)
@@ -52,67 +69,45 @@ Vehicle (Abstract Base Class)
 #### **ElectricCar.cs** (Inherits from Vehicle)
 - **Constructor**: Takes vehicle ID, model name, and seating capacity
 - **Seating Capacity**: Stores passenger capacity (default: 5)
-- **Trip Cost Calculation**: `(5 + 0.5) × distance`
-  - Designed for longer urban commutes
+- **Trip Cost Calculation**: `5 + (0.5 × distance)`
   
 #### **ElectricScooter.cs** (Inherits from Vehicle)
 - **Constructor**: Takes vehicle ID, model name, and max speed limit
 - **Speed Limit**: Maximum operating speed (default: 25 km/h)
-- **Trip Cost Calculation**: `(1 + 0.15) × distance`
-  - Designed for short-distance urban trips
+- **Trip Cost Calculation**: `1 + (0.15 × distance)`
 
 #### **EcoRideMain.cs** (Entry Point)
 - Demonstrates vehicle instantiation
 - Shows trip cost calculation for both vehicle types
-- Sample implementation with Tesla Model 3 and Xiaomi Electric Scooter
 
 ---
-
-##  Project Structure
-
-```
-Eco-Ride/
-├── Vehicle.cs              # Abstract base class for all vehicles
-├── ElectricCar.cs          # Electric car implementation
-├── ElectricScooter.cs      # Electric scooter implementation
-├── EcoRideMain.cs          # Application entry point and demo
-├── Eco-Ride.csproj         # Project configuration file
-├── Readme.md              # This file
-└── .gitignore             # Git ignore configuration
-```
-
----
-
-##  Getting Started
-
-### Prerequisites
-- **.NET 10.0 SDK** installed
-- **Visual Studio 2022** or **Visual Studio Code** with C# extension
-- **Git** for version control
 
 ### Sample Output
 
 ```
 Welcome to Eco-Ride Urban Mobility System
-Trip cost for Electric Car: $55
-Trip cost for Electric Scooter: $11.5
+-----------------------------------------
+Vehicle ID: 1, Model: EcoCar Model X, Maintainance Status: Good, Distance covered: 10km
+The total trip cost for the electric car is: $10
+------------------------------
+Vehicle ID: 2, Model: EcoScooter Model S, Maintainance Status: Needs Service, Distance covered: 10km
+The total trip cost for the electric scooter is: $2.5
+------------------------------
 ```
 
 ---
 
 ##  Learning Objectives
 
-This project demonstrates:
-
 - **Abstract Classes**: Using `Vehicle` as an abstract base class
 - **Inheritance**: `ElectricCar` and `ElectricScooter` inherit from `Vehicle`
-- **Polymorphism**: Different implementations of `calculate_trip_cost()` method
 - **Encapsulation**: Private fields with public getter/setter methods
+- **Polymorphism**: Different implementations of `calculate_trip_cost()` method
 - **Object-Oriented Design**: Single Responsibility Principle for each class
 - **Input Validation**: Battery percentage validation (0-100 range)
-- **Practical Application**: Real-world problem solving through OOP
 
 ---
- 
-*Author: Prashant Varshney*
 
+## 👤 Author
+**Prashant Varshney**  
+B.Tech CSE (Data Analytics)  
