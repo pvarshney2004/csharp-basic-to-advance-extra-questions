@@ -14,7 +14,10 @@ namespace Eco_Ride
         }
         public override void CalculateTripCost(double distance)
         {
-
+            double baseFare = 1.00;
+            double costPerKm = 0.15;
+            double totalCost = baseFare + (distance * costPerKm);
+            Console.WriteLine($"The total trip cost for the electric scooter is: ${totalCost}");
         }
     }
 }
