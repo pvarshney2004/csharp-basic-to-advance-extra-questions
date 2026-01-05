@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Eco_Ride
 {
-    public class Vehicle
+    public abstract class Vehicle
     {
         public int VehicleId;
         public string Model;
@@ -54,5 +54,7 @@ namespace Eco_Ride
             BatteryPercentage = batteryPercentage;
             MaintenanceStatus = maintainanceStatus;
         }
+
+        public abstract void CalculateTripCost(double distance);
     }
 }

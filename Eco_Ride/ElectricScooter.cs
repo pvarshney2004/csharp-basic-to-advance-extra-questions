@@ -12,5 +12,9 @@ namespace Eco_Ride
         {
             this.maxSpeed = maxSpped;
         }
+        public override void CalculateTripCost(double distance)
+        {
+
+        }
     }
 }

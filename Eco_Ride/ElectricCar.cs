@@ -12,6 +12,10 @@ namespace Eco_Ride
         {
             this.seatingCapacity = seatingCapacity;
         }
+        public override void CalculateTripCost(double distance)
+        {
+            
+        }
     }
 
 }
