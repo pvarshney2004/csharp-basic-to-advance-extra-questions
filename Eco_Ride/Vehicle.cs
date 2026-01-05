@@ -47,11 +47,12 @@ namespace Eco_Ride
         }
 
 
-        public Vehicle(int vehicleId, string model, int batteryPercentage)
+        public Vehicle(int vehicleId, string model, int batteryPercentage, string maintainanceStatus)
         {
             VehicleId = vehicleId;
             Model = model;
             BatteryPercentage = batteryPercentage;
+            MaintenanceStatus = maintainanceStatus;
         }
     }
 }
